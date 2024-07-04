@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-" />
+  <meta name="viewport" content="width=device-width, initial-scale=." />
+  <style>
+    html {
+      font-size: px;
+      line-height: .;
+      background-color: #fff;
+      color: #;
+    }
+
+    body {
+      margin:  auto;
+      max-width: px;
+      padding:  px;
+      font-family: sans-serif;
+    }
+
+    a {
+      color: #db;
+      text-decoration: none;
+    }
+
+    header {
+      margin-bottom: px;
+      padding: px ;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    nav div a {
+      margin-left: px;
+    }
+
+    ul {
+      margin: ;
+      padding: ;
+      list-style: none;
+    }
+
+    li {
+      margin-bottom: px;
+    }
+
+    /* Dark mode styles */
+    @media (prefers-color-scheme: dark) {
+      html {
+        background-color: #eb;
+        color: #fff;
+      }
+
+      a {
+
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <strong>JSON Server</strong>
+      <div>
+        <a href="https://github.com/typicode/json-server">Docs</a>
+        <a href="https://github.com/sponsors/typicode">♡ Sponsor</a>
+      </div>
+    </nav>
+  </header>
+  <main class="my-">
+    <p class="bg-gradient-to-r from-purple- via-pink- to-red- text-transparent bg-clip-text">✧*｡٩(ˊᗜˋ*)و✧*｡</p>
+    <% if (Object.keys(it.data).length===) { %>
+      <p>No resources found in JSON file</p>
+    <% } %>
+    <% Object.entries(it.data).forEach(function([name]) { %>
+      <ul>
+        <li>
+          <a href="<%= name %>">/<%= name %></a>
+          <span>
+            <% if (Array.isArray(it.data[name])) { %>
+              - <%= it.data[name].length %>
+                <%= it.data[name].length>  ? 'items' : 'item' %>
+          </span>
+          <% } %>
+        </li>
+      </ul>
+    <% }) %>
+  </main>
+</body>
+
+</html>
